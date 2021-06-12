@@ -1,5 +1,4 @@
 package com.company;
-
 import java.io.File;
 
 public class Animal {
@@ -10,7 +9,7 @@ public class Animal {
 
     static final public Double DEFAULT_ANIMAL_WEIGHT = 1.0;
 
-    Animal(String species){
+    public Animal(String species){
         this.species = species;
 
         switch (this.species){
@@ -19,18 +18,26 @@ public class Animal {
             default: this.weight = DEFAULT_ANIMAL_WEIGHT;
         }
     }
-    void feed(){
-        this.weight += 1;
-        System.out.println("thx for food :D");
-    }
-
-    void takeForAWalk(){
-        this.weight -= 1;
-        System.out.println("Weight down");
-        if (weight == 0)
-        {
-            System.out.println("Tango down, fck off");
+    void feed() {
+        if(this.weight>0){
+            this.weight += 1;
+            System.out.println("thx for food :D");
+        }
+        else{
+            System.out.println("Staph, I'm already dead");
         }
     }
 
+    void takeForAWalk(){
+        if(this.weight>0){
+            this.weight -= 1;
+            Sytem.out.println("Thanks for walk, very nice");
+        }
+        else{
+            System.out.println("Walking with dead pet, nice");
+        }
+    }
+    public String toString(){
+        return species+" "+weight+" "+name;
+    }
 }
