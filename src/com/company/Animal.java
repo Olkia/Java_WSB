@@ -31,7 +31,7 @@ public class Animal {
     void takeForAWalk(){
         if(this.weight>0){
             this.weight -= 1;
-            Sytem.out.println("Thanks for walk, very nice");
+            System.out.println("Thanks for walk, very nice");
         }
         else{
             System.out.println("Walking with dead pet, nice");

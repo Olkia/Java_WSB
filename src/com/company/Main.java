@@ -18,7 +18,7 @@ public class Main {
 
         System.out.println("dog name = " + dog.name);
 
-        Phone iphone = new Phone(producent: "apple", model: "6s", screenSize: 4.5);
+        Phone iphone = new Phone("apple", "6s", 2018);
 
         Human me = new Human();
         me.firstName = "Ola";
@@ -37,14 +37,14 @@ public class Main {
             me.buyCar(car);
 
             System.out.println(car.equals(car2));
-            System.out.printl(car.equals(car3));
+            System.out.println(car.equals(car3));
             System.out.println(car);
             System.out.println(car2);
             System.out.println(me);
             System.out.println(dog);
 
-            Phone phone = new Phone("Xiaomi", "Mi8",5.0);
-            Sytem.out.println(phone);
+            Phone phone = new Phone("Xiaomi", "Mi8",2020);
+            System.out.println(phone);
             phone.turnOn();
             car.turnOn();
     }
